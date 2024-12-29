@@ -14,7 +14,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/anarch02/fictonews.git
+   git clone https://github.com/anarch02/ficto-news.git
    ```
 
 2. Navigate to the project directory:
