@@ -21,6 +21,11 @@ class CategoryFactory extends Factory
                 'en' => $this->faker->word,
                 'es' => $this->faker->word,
             ],
+            'seo_description' => [
+                'en' => $this->faker->sentence,
+                'es' => $this->faker->sentence,
+            ],
+            'seo_keywords' => $this->faker->words,
         ];
     }
 }

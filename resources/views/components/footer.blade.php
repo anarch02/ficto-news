@@ -2,55 +2,33 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-4">
-          <h3>About Us</h3>
+          <h3>{{ __('app.about') }}</h3>
           <p class="mb-4">
-            <img src="{{ asset('assets/images/img_1.jpg') }}" alt="Image placeholder" class="img-fluid">
+            <img src="{{ asset('assets/images/img_1.png') }}" alt="Image placeholder" class="img-fluid">
           </p>
 
-          <p>Lorem ipsum dolor sit amet sa ksal sk sa, consectetur adipisicing elit. Ipsa harum inventore reiciendis. <a href="#">Read More</a></p>
+          <p>Welcome to <strong>FictoNews</strong> – a unique news portal where fictional stories come to life through the power of artificial intelligence. <a href="{{ route('about') }}">Read More</a></p>
         </div>
         <div class="col-md-6 ml-auto">
           <div class="row">
             <div class="col-md-7">
-              <h3>Latest Post</h3>
+              <h3>{{ __('app.latest_posts') }}</h3>
               <div class="post-entry-sidebar">
                 <ul>
+                  @foreach ($posts as $post)
                   <li>
                     <a href="">
-                      <img src="{{ asset('assets/images/img_6.jpg') }}" alt="Image placeholder" class="mr-4">
+                      <img src="{{ $post->image }}" alt="Image placeholder" class="mr-4">
                       <div class="text">
-                        <h4>How to Find the Video Games of Your Youth</h4>
+                        <h4>{{ $post->title }}</h4>
                         <div class="post-meta">
-                          <span class="mr-2">March 15, 2018 </span> &bullet;
-                          <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                          <span class="mr-2">{{ date_format($post->created_at, 'D, d M Y') }} </span> &bullet;
+                          <span class="ml-2"><span class="fa fa-comments"></span> {{ $post->comments->count() }}</span>
                         </div>
                       </div>
                     </a>
                   </li>
-                  <li>
-                    <a href="">
-                      <img src="{{ asset('assets/images/img_3.jpg') }}" alt="Image placeholder" class="mr-4">
-                      <div class="text">
-                        <h4>How to Find the Video Games of Your Youth</h4>
-                        <div class="post-meta">
-                          <span class="mr-2">March 15, 2018 </span> &bullet;
-                          <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <img src="{{ asset('assets/images/img_4.jpg') }}" alt="Image placeholder" class="mr-4">
-                      <div class="text">
-                        <h4>How to Find the Video Games of Your Youth</h4>
-                        <div class="post-meta">
-                          <span class="mr-2">March 15, 2018 </span> &bullet;
-                          <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
+                  @endforeach
                 </ul>
               </div>
             </div>
@@ -59,18 +37,16 @@
             <div class="col-md-4">
 
               <div class="mb-5">
-                <h3>Quick Links</h3>
+                <h3>{{ __('app.quick_links') }}</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Travel</a></li>
-                  <li><a href="#">Adventure</a></li>
-                  <li><a href="#">Courses</a></li>
-                  <li><a href="#">Categories</a></li>
+                    @foreach ($categories as $category)
+                    <li><a href="{{ route('category', $category->slug) }}">{{ $category->name }}</a></li>
+                    @endforeach
                 </ul>
               </div>
 
               <div class="mb-5">
-                <h3>Social</h3>
+                <h3>{{ __('app.social') }}</h3>
                 <ul class="list-unstyled footer-social">
                   <li><a href="#"><span class="fa fa-twitter"></span> Twitter</a></li>
                   <li><a href="#"><span class="fa fa-facebook"></span> Facebook</a></li>
@@ -88,7 +64,7 @@
         <div class="col-md-12 text-center">
           <p class="small">
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy; <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved | This template is made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+        Copyright &copy; <script data-cfasync="true" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All Rights Reserved
         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
         </div>

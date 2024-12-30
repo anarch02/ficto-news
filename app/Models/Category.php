@@ -15,14 +15,16 @@ class Category extends Model
 
 
     /** @var array<string> */
-    protected $fillable = ['name', 'slug'];
+    protected $fillable = ['name', 'slug', 'seo_description', 'seo_keywords'];
 
     protected $casts = [
         'name' => 'array',
+        'seo_description' => 'array',
+        'seo_keywords' => 'array',
     ];
 
     /** @var array<string> */
-    protected $translatable = ['name'];
+    protected $translatable = ['name', 'seo_description'];
 
     /** @var array<string> */
     protected $sluggable = ['slug'];

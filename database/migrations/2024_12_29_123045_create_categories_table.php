@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('slug')->unique();
             $table->json('name');
+            $table->json('seo_description')->nullable();
+            $table->json('seo_keywords')->nullable();
             $table->timestamps();
         });
     }
