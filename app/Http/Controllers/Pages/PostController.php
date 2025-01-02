@@ -14,4 +14,19 @@ class PostController extends Controller
             'post' => Post::where('slug', $slug)->firstOrFail(),
         ]);
     }
+
+    public function leave_a_comment(Request $request, string $slug)
+    {
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255'],
+            'text' => ['required', 'string'],
+        ]);
+
+        $post = Post::where('slug', $slug)->firstOrFail();
+
+        $post->comments()->create($data);
+
+        return redirect()->route('post', ['slug' => $slug]);
+    }
 }

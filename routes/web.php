@@ -14,3 +14,4 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'message'])->name('contact.message');
 Route::get('/category/{slug}', [CategoryController::class, 'index'])->name('category');
 Route::get('/post/{slug}', [PostController::class, 'index'])->name('post');
+Route::post('/post/{slug}/comment', [PostController::class, 'leave_a_comment'])->name('post.comment');

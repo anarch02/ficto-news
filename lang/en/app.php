@@ -10,4 +10,6 @@ return [
     'category' => 'Category',
     'quick_links' => 'Quick links',
     'social' => 'Social',
+    'comments' => 'Comments',
+    'leave_a_comment' => 'Leave a comment',
 ];
