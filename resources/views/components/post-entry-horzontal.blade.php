@@ -1,5 +1,5 @@
 <div class="post-entry-horzontal">
-    <a href="{{ route('post', $post->slug) }}">
+    <a href="{{ route('post', ['locale' => app()->getLocale(), 'slug' => $post->slug]) }}">
       <div class="image element-animate" data-animate-effect="fadeIn" style="background-image: url({{ $post->image }});"></div>
       <span class="text">
         <div class="post-meta">

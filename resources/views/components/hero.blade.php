@@ -6,7 +6,7 @@
         <div class="owl-carousel owl-theme home-slider">
             @foreach ($posts as $post)
             <div>
-                <a href="{{ route('post', $post->slug) }}" class="a-block d-flex align-items-center height-lg" style="background-image: url('{{ $post->image }}'); ">
+                <a href="{{ route('post', ['locale' => app()->getLocale(), 'slug' => $post->slug]) }}" class="a-block d-flex align-items-center height-lg" style="background-image: url('{{ $post->image }}'); ">
                     <div class="text half-to-full">
                         @foreach ($post->categories as $category)
                             <span class="category mb-5">{{ $category->name }}</span>

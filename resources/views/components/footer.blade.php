@@ -7,7 +7,7 @@
             <img src="{{ asset('assets/images/img_1.png') }}" alt="Image placeholder" class="img-fluid">
           </p>
 
-          <p>Welcome to <strong>FictoNews</strong> – a unique news portal where fictional stories come to life through the power of artificial intelligence. <a href="{{ route('about') }}">Read More</a></p>
+          <p>{{ __('app.footer_text') }} <a href="{{ route('about', ['locale' => app()->getLocale()]) }}">{{ __('app.read_more') }}</a></p>
         </div>
         <div class="col-md-6 ml-auto">
           <div class="row">
@@ -40,7 +40,7 @@
                 <h3>{{ __('app.quick_links') }}</h3>
                 <ul class="list-unstyled">
                     @foreach ($categories as $category)
-                    <li><a href="{{ route('category', $category->slug) }}">{{ $category->name }}</a></li>
+                    <li><a href="{{ route('category', ['locale' => app()->getLocale(), 'slug' => $category->slug]) }}">{{ $category->name }}</a></li>
                     @endforeach
                 </ul>
               </div>

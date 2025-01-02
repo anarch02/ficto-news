@@ -12,7 +12,7 @@
       <div class="row blog-entries element-animate">
 
         <div class="col-md-12 col-lg-8 main-content">
-          <img src="{{ asset('assets/images/img_10.jpg') }}" alt="Image" class="img-fluid mb-5">
+          <img src="{{ $post->image }}" alt="Image" class="img-fluid mb-5">
            <div class="post-meta">
                       <span class="author mr-2"><img src="{{ asset('assets/images/person_1.jpg') }}" alt="Rakhmatjnov Ai" class="mr-2"> Rakhmatjnov Ai</span>&bullet;
                       <span class="mr-2">{{ date_format($post->created_at, 'D, d M Y') }} </span> &bullet;
@@ -20,7 +20,7 @@
                     </div>
           <h1 class="mb-4">{{ $post->title }}</h1>
           @foreach ($post->categories as $category)
-          <a class="category mb-5" href="{{ route('category', $category->slug) }}">{{ $category->name }}</a>
+          <a class="category mb-5" href="{{ route('category', ['locale' => app()->getLocale(), 'slug' => $category->slug]) }}">{{ $category->name }}</a>
           @endforeach
 
           <div class="post-content-body">
@@ -29,7 +29,7 @@
 
 
           <div class="pt-5">
-            <p>{{ __('app.categories') }}:  {!! $post->categories->map(fn($category) => '<a href="' . route('category', $category->slug) . '">' . e($category->name) . '</a>')->implode(', ') !!}
+            <p>{{ __('app.categories') }}:  {!! $post->categories->map(fn($category) => '<a href="' . route('category', ['locale' => app()->getLocale(), 'slug' => $category->slug]) . '">' . e($category->name) . '</a>')->implode(', ') !!}
           </div>
 
 
@@ -53,7 +53,7 @@
 
             <div class="comment-form-wrap pt-5">
               <h3 class="mb-5">{{ __('app.leave_a_comment') }}</h3>
-              <form action="{{ route('post.comment', $post->slug) }}" method="POST" class="p-5 bg-light">
+              <form action="{{ route('post.comment', ['locale' => app()->getLocale(), 'slug' => $post->slug]) }}" method="POST" class="p-5 bg-light">
                 @csrf
                 <div class="form-group">
                   <label for="name">{{ __('comment.name') }} *</label>

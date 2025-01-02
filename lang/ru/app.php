@@ -2,9 +2,16 @@
 
 return [
 
-    'home' => 'Home',
-    'about' => 'About',
-    'contact' => 'Contact',
-    'categories' => 'Categories',
-
+    'home' => 'Главная',
+    'about' => 'О проекте',
+    'contact' => 'Контакты',
+    'categories' => 'Категории',
+    'latest_posts' => 'Последние публикации',
+    'category' => 'Категория',
+    'quick_links' => 'Быстрые ссылки',
+    'social' => 'Социальные сети',
+    'comments' => 'Комментарии',
+    'leave_a_comment' => 'Оставить комментарий',
+    'read_more' => 'Читать далее',
+    'footer_text' => 'Добро пожаловать в FictoNews — уникальный новостной портал, где вымышленные истории оживают с помощью искусственного интеллекта.'
 ];

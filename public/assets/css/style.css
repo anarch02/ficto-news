@@ -138,6 +138,16 @@ header {
       opacity: 1; }
   .top-bar .social {
     text-align: left; }
+
+  .top-bar .locale a, .top-bar .search-icon a {
+    color: #fff;
+    opacity: .5;
+    padding: 5px; }
+    .top-bar .locale a:hover, .top-bar .search-icon a:hover {
+      opacity: 1; }
+
+  .top-bar .locale {
+    text-align: center; }
   .top-bar .search-icon {
     text-align: right; }
 

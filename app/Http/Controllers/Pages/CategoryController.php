@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function index(string $slug)
+    public function index(string $locale, string $slug)
     {
         $category = Category::where('slug', $slug)->firstOrFail();
         $posts = $category->posts()->paginate(10);

@@ -4,19 +4,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Password Reset Language Lines
+    | Языковые строки для сброса пароля
     |--------------------------------------------------------------------------
     |
-    | The following language lines are the default lines which match reasons
-    | that are given by the password broker for a password update attempt
-    | outcome such as failure due to an invalid password / reset token.
+    | Следующие строки используются менеджером паролей для различных сообщений
+    | о результате попытки обновления пароля, например, в случае неудачи
+    | из-за недействительного токена сброса или других причин.
     |
     */
 
-    'reset' => 'Your password has been reset.',
-    'sent' => 'We have emailed your password reset link.',
-    'throttled' => 'Please wait before retrying.',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that email address.",
+    'reset' => 'Ваш пароль был успешно сброшен.',
+    'sent' => 'Мы отправили вам ссылку для сброса пароля на электронную почту.',
+    'throttled' => 'Пожалуйста, подождите перед повторной попыткой.',
+    'token' => 'Этот токен сброса пароля недействителен.',
+    'user' => 'Мы не можем найти пользователя с таким адресом электронной почты.',
 
 ];

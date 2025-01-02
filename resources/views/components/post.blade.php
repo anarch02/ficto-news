@@ -1,5 +1,5 @@
 <div class="col-md-6">
-    <a href="{{ route('post', $post->slug) }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
+    <a href="{{ route('post', ['locale' => app()->getLocale(), 'slug' => $post->slug]) }}" class="blog-entry element-animate" data-animate-effect="fadeIn">
       <img src="{{ $post->image }}" alt="Image placeholder">
       <div class="blog-content-body">
         <div class="post-meta">
