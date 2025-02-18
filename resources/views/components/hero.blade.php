@@ -19,7 +19,7 @@
 
                     </div>
                     <h3>{{ $post->title }}</h3>
-                    <p>{{ \Illuminate\Support\Str::limit($post->content, 100, '...') }}</p>
+                    <p>{{ \Illuminate\Support\Str::limit($post->seo_description, 100, '...') }}</p>
                     </div>
                 </a>
             </div>

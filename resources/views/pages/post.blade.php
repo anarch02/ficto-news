@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('title', $post->title)
-@section('seo_description', $post->seo_description)
-@section('seo_keywords', implode(', ', $post->seo_keywords))
+{{-- @section('seo_description', $post->seo_description) --}}
+{{-- @section('seo_keywords', implode(', ', $post->seo_keywords)) --}}
 @section('image', $post->image)
 
 @section('content')
@@ -18,14 +18,13 @@
                       <span class="mr-2">{{ date_format($post->created_at, 'D, d M Y') }} </span> &bullet;
                       <span class="ml-2"><span class="fa fa-comments"></span> {{ $post->comments->count() }}</span>
                     </div>
-          <h1 class="mb-4">{{ $post->title }}</h1>
           @foreach ($post->categories as $category)
           <a class="category mb-5" href="{{ route('category', ['locale' => app()->getLocale(), 'slug' => $category->slug]) }}">{{ $category->name }}</a>
           @endforeach
 
           <div class="post-content-body">
             {!! $post->content !!}
-        </div>
+          </div>
 
 
           <div class="pt-5">
