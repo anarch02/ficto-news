@@ -18,7 +18,7 @@
                   @foreach ($posts as $post)
                   <li>
                     <a href="">
-                      <img src="{{ $post->image }}" alt="Image placeholder" class="mr-4">
+                      {{-- <img src="{{ $post->image }}" alt="Image placeholder" class="mr-4"> --}}
                       <div class="text">
                         <h4>{{ $post->title }}</h4>
                         <div class="post-meta">

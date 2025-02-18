@@ -27,7 +27,6 @@
             <div class="col-md-12">
                 @foreach ($posts as $post)
                     <x-post-entry-horzontal :post="$post" />
-
                 @endforeach
             </div>
           </div>

@@ -11,7 +11,7 @@ use GeminiAPI\Resources\Parts\TextPart;
 
 class PostController extends Controller
 {
-    public function generate()
+    public function generate(string $category = 'Технологии')
     {
         $data = [];
 
@@ -21,7 +21,7 @@ class PostController extends Controller
             $title_ru = $client->withV1BetaVersion()
                 ->generativeModel(ModelName::GEMINI_1_5_FLASH)
                 ->withSystemInstruction('Ты автор вымышленных новостей. Я буду давать тебе категорию поста, и ты должен написать только заголовок.')
-                ->generateContent(new TextPart('Технологии'));
+                ->generateContent(new TextPart($category));
 
             $content_ru = $client->withV1BetaVersion()
                 ->generativeModel(ModelName::GEMINI_1_5_FLASH)

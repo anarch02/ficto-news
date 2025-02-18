@@ -1,13 +1,4 @@
 <div class="col-md-12 col-lg-4 sidebar">
-    <div class="sidebar-box search-form-wrap">
-      <form action="#" class="search-form">
-        <div class="form-group">
-          <span class="icon fa fa-search"></span>
-          <input type="text" class="form-control" id="s" placeholder="Type a keyword and hit enter">
-        </div>
-      </form>
-    </div>
-    <!-- END sidebar-box -->
     <div class="sidebar-box">
         <div class="bio text-center">
           <img src="{{ asset('assets/images/person_1.jpg') }}" alt="Image Placeholder" class="img-fluid">
@@ -35,49 +26,6 @@
       </div>
     </div>
 
-    <!-- END sidebar-box -->
-    {{-- <div class="sidebar-box">
-      <h3 class="heading">Popular Posts</h3>
-      <div class="post-entry-sidebar">
-        <ul>
-          <li>
-            <a href="">
-              <img src="{{ asset('assets/images/img_2.jpg') }}" alt="Image placeholder" class="mr-4">
-              <div class="text">
-                <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                <div class="post-meta">
-                  <span class="mr-2">March 15, 2018 </span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="{{ asset('assets/images/img_4.jpg') }}" alt="Image placeholder" class="mr-4">
-              <div class="text">
-                <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                <div class="post-meta">
-                  <span class="mr-2">March 15, 2018 </span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <img src="{{ asset('assets/images/img_12.jpg') }}" alt="Image placeholder" class="mr-4">
-              <div class="text">
-                <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                <div class="post-meta">
-                  <span class="mr-2">March 15, 2018 </span>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- END sidebar-box --> --}}
-
     <div class="sidebar-box">
       <h3 class="heading">{{ __('app.categories') }}</h3>
       <ul class="categories">
@@ -86,4 +34,4 @@
         @endforeach
       </ul>
     </div>
-    <!-- END sidebar-box -->
+</div>

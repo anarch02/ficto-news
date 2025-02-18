@@ -13,8 +13,7 @@ use GeminiAPI\Resources\Parts\TextPart;
 use App\Http\Controllers\AIHordeController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController as ControllersPostController;
-
-Route::get('/test', [ControllersPostController::class, 'generate']);
+use Illuminate\Support\Facades\Http;
 
 
 Route::get('/', function(){

@@ -12,7 +12,7 @@
       <div class="row blog-entries element-animate">
 
         <div class="col-md-12 col-lg-8 main-content">
-          <img src="{{ $post->image }}" alt="Image" class="img-fluid mb-5">
+          {{-- <img src="{{ $post->image }}" alt="Image" class="img-fluid mb-5"> --}}
            <div class="post-meta">
                       <span class="author mr-2"><img src="{{ asset('assets/images/person_1.jpg') }}" alt="Rakhmatjnov Ai" class="mr-2"> Rakhmatjnov Ai</span>&bullet;
                       <span class="mr-2">{{ date_format($post->created_at, 'D, d M Y') }} </span> &bullet;
