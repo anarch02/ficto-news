@@ -10,7 +10,7 @@
     <meta name="description" content="@yield('seo_description')">
     <meta name="keywords" content="@yield('seo_keywords')">
     <meta property="og:title" content="@yield('title')">
-    <meta property="og:description" content="@yield('seo_descritpion')">
+    <meta property="og:description" content="@yield('seo_description')">
     <meta property="og:image" content="@yield('image')">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
@@ -18,13 +18,20 @@
     <meta property="og:site_name" content="fictonews">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('title')">
-    <meta name="twitter:description" content="@yield('seo_descritpion')">
+    <meta name="twitter:description" content="@yield('seo_description')">
     <meta name="twitter:image" content="@yield('image')">
     <meta name="twitter:site" content="@fictonews">
     <meta name="twitter:creator" content="@fictonews">
     <meta name="robots" content="index, follow">
 
 	<meta name="author" content="fictonews">
+
+    <link rel="icon" type="image/png" href="{{ asset('favicon-96x96.png') }}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}" />
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}" />
+    <meta name="apple-mobile-web-app-title" content="Fictonews" />
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}" />
 
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">

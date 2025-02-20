@@ -3,19 +3,19 @@
 return [
 
     'title' => [
-        'home' => 'Home',
-        'about' => 'About',
-        'contact' => 'Contact',
+        'home' => 'FictoNews – AI-Generated News',
+        'about' => 'About FictoNews – AI in News',
+        'contact' => 'Contact FictoNews – Get in Touch',
     ],
     'description' => [
-        'home' => 'Home',
-        'about' => 'About',
-        'contact' => 'Contact',
+        'home' => 'Stay updated with the latest AI-generated news on technology, science, politics, and sports.',
+        'about' => 'FictoNews is an innovative news website that leverages artificial intelligence to generate fresh and reliable news.',
+        'contact' => 'Get in touch with the FictoNews team. Leave a request or contact us for more details.',
     ],
     'keywords' => [
-        'home' => 'Home',
-        'about' => 'About',
-        'contact' => 'Contact',
+        'home' => 'news, AI news, technology, science, politics, sports, artificial intelligence, FictoNews',
+        'about' => 'about us, FictoNews, AI, news, automated news, artificial intelligence',
+        'contact' => 'contact, FictoNews, support, get in touch, AI news',
     ],
 
 ];

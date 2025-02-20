@@ -3,7 +3,7 @@
 @section('title', __('seo.title.home'))
 @section('seo_description', __('seo.description.home'))
 @section('seo_keywords', __('seo.keywords.home'))
-@section('image', asset('assets/images/img_1.png'))
+@section('image', asset('assets/images/img_6.png'))
 
 @section('content')
     <x-hero />

@@ -3,7 +3,7 @@
 @section('title', __('seo.title.contact'))
 @section('seo_description', __('seo.description.contact'))
 @section('seo_keywords', __('seo.keywords.contact'))
-@section('image', asset('assets/images/img_1.png'))
+@section('image', asset('assets/images/img_6.png'))
 
 @section('content')
 <section class="site-section">
