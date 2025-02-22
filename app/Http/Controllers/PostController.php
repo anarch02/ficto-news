@@ -30,7 +30,7 @@ class PostController extends Controller
 
             $preview_ru = $client->withV1BetaVersion()
                 ->generativeModel(ModelName::GEMINI_1_5_FLASH)
-                ->withSystemInstruction('Ты автор вымышленных новостей. Я буду давать тебе статью поста, и ты должен написать краткое описание для SEO.')
+                ->withSystemInstruction('Ты автор вымышленных новостей. Я буду давать тебе статью поста, и ты должен написать краткое описание для SEO. Дай тольлко один и текст.')
                 ->generateContent(new TextPart($content_ru->text()));
 
             $title_en = $client->withV1BetaVersion()

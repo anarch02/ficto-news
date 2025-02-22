@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://fictonews.rakhmatjonov.uz/sitemap.xml
