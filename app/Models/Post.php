@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Log;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Translatable\HasTranslations;
+use Telegram\Bot\Laravel\Facades\Telegram;
 
 class Post extends Model
 {
@@ -74,10 +75,13 @@ class Post extends Model
         parent::boot();
 
         static::created(function ($post) {
-            $message= "<b>{$post->title}</b>\n". $post->seo_description."\n\n". route('post', ['locale' => 'ru', 'slug' => $post->slug]);
+            $message= view('telegram.post', compact('post'))->render();
 
             try {
-                Telegraph::chat(env('TELEGRAM_CHANNEL_ID'))->message($message)->send();
+                Telegram::sendMessage([
+                    'chat_id' => env('TELEGRAM_CHANNEL_ID'),
+                    'text' => $message,
+                ]);
             } catch (\Exception $e) {
                 Log::error("Failed to send project to Telegram: " . $e->getMessage());
             }
