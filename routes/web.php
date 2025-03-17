@@ -1,20 +1,11 @@
 <?php
 
-use App\Ai\Chat;
 use App\Http\Controllers\Pages\AboutController;
 use App\Http\Controllers\Pages\CategoryController;
 use App\Http\Controllers\Pages\ContactController;
 use App\Http\Controllers\Pages\HomeController;
 use App\Http\Controllers\Pages\PostController;
 use Illuminate\Support\Facades\Route;
-use GeminiAPI\Client;
-use GeminiAPI\Resources\ModelName;
-use GeminiAPI\Resources\Parts\TextPart;
-use App\Http\Controllers\AIHordeController;
-use App\Http\Controllers\ImageController;
-use App\Http\Controllers\PostController as ControllersPostController;
-use Illuminate\Support\Facades\Http;
-
 
 Route::get('/', function(){
     $locale = app()->getLocale();

@@ -1,13 +1,19 @@
 <header role="banner">
     <div class="top-bar">
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-between">
           <div class="col-4 social">
-            <a href="#"><span class="fa fa-twitter"></span></a>
-            <a href="#"><span class="fa fa-facebook"></span></a>
-            <a href="#"><span class="fa fa-instagram"></span></a>
-            <a href="#"><span class="fa fa-youtube-play"></span></a>
-          </div>
+            <a href="https://t.me/fictonews"><span class="fa fa-telegram"></span></a>
+            <a href="https://t.me/fictonews">Telegram Channel</a>
+            </div>
+
+          {{-- <div class="col-4 search-top">
+            <!-- <a href="#"><span class="fa fa-search"></span></a> -->
+            <form action="#" class="search-top-form">
+              <span class="icon fa fa-search"></span>
+              <input type="text" id="s" placeholder="Type keyword to search...">
+            </form>
+          </div> --}}
           <div class="col-4 locale">
             @foreach (config('app.available_locales') as $locale)
                 @php
@@ -20,13 +26,6 @@
                     {{ strtoupper($locale) }}
                 </a>
             @endforeach
-          </div>
-          <div class="col-4 search-top">
-            <!-- <a href="#"><span class="fa fa-search"></span></a> -->
-            <form action="#" class="search-top-form">
-              <span class="icon fa fa-search"></span>
-              <input type="text" id="s" placeholder="Type keyword to search...">
-            </form>
           </div>
         </div>
       </div>

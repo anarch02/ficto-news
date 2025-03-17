@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use DefStudio\Telegraph\Facades\Telegraph;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Translatable\HasTranslations;
@@ -65,5 +67,20 @@ class Post extends Model
     public function comments()
     {
         return $this->hasMany(Comment::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($post) {
+            $message= "<b>{$post->title}</b>\n". $post->seo_description."\n\n". route('post', ['locale' => 'ru', 'slug' => $post->slug]);
+
+            try {
+                Telegraph::chat(env('TELEGRAM_CHANNEL_ID'))->message($message)->send();
+            } catch (\Exception $e) {
+                Log::error("Failed to send project to Telegram: " . $e->getMessage());
+            }
+        });
     }
 }

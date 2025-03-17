@@ -58,8 +58,6 @@ class PostController extends Controller
             $data['title'] = $title;
             $data['content'] = $content;
             $data['seo_description'] = $preview;
-            // Сохранение в БД (если нужно)
-            // Post::create($data);
 
             return $data;
         } catch (\Exception $e) {
